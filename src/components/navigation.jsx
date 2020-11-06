@@ -38,16 +38,19 @@ export default function Navigation ({user}) {
                         )
                     })
                     }
-
-                    <span>
-                        <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" size={38} />
-                        <span className="menu-avatar-name">
-                            {`${user.firstName} ${user.lastName}`}
-                        </span>
-                        <i className="ionicons icon ion-ios-menu" onClick={() => setMenuActive(!menuActive)} />
-                    </span>
                 </ul>
+                <span className="menu-avatar-container">
+
+                    <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" size={38} />
+
+                    <span className="menu-avatar-name">
+                        {`${user.firstName} ${user.lastName}`}
+                    </span>
+                        
+                </span>
+                
             </div>
+            <i className="ionicons icon ion-ios-menu" onClick={() => setMenuActive(!menuActive)} />
         </nav>
     )
 };
