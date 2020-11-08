@@ -6,7 +6,7 @@ export default [
         date: moment().format('MMMM DD, YYYY'),
         categories: ['Tech Culture', 'Tech News'],
         link: '#',
-        image: 'anyone_can_code.jpg'
+        image: 'anyone_can_code.jpeg'
     },
     {
         title: 'Using AWS 53 for Storing a Blog Images',

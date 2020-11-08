@@ -6,14 +6,14 @@ export default [
         date: moment().format('MMMM DD, YYYY'),
         categories: ['Tech Culture'],
         link: '#',
-        image: 'money.jpg'
+        image: 'cloud_storage.jpg'
     },
     {
         title: 'GraphQL vs REST',
         date: moment().format('MMMM DD, YYYY'),
         categories: ['React', 'JavaScript'],
         link: '#',
-        image: 'apollo_graphql.jpg'
+        image: 'apollo_graphql.png'
     },
     {
         title: 'A Day in the Life of a Programmer',

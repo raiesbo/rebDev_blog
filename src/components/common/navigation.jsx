@@ -27,7 +27,7 @@ export default function Navigation ({user}) {
 
     return(
         <nav className="site-navigation">
-            <span className="menu-title">WebDev Blog</span>
+            <span className="menu-title">REBDev Blog</span>
             <div className={`menu-content-container ${menuActive && "active"}`}>
                 <ul>
                     {navLinks.map((link, index) => {

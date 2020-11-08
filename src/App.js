@@ -1,13 +1,13 @@
 import React from 'react';
-import Navigation from "./components/common/gitnavigation"
+import Navigation from "./components/common/navigation"
 import {BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import PageRenderer from "./page-renderer";
 
 
 function App() {
 	const user = {
-		firstName: "reb",
-		lastName: "Coder"
+		firstName: "REB",
+		lastName: "Code"
 	}
 
 	return (

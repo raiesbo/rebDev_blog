@@ -1,7 +1,11 @@
-import MansonryPost from './mansonry-post';
-import PostMansonry from './post-mansonry';
+import MasonryPost from './masonry-post';
+import PostMasonry from './post-masonry';
+import PostGrid from './post-grid';
+import TagRow from './tag-row';
 
 export {
-    MansonryPost,
-    PostMansonry
+    MasonryPost,
+    PostMasonry,
+    PostGrid,
+    TagRow
 }
