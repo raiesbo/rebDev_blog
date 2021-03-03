@@ -2,5 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "devblog_gatsby",
   },
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-sass`
+  ]
 };
