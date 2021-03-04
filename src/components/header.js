@@ -1,7 +1,20 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
+
+import './header.scss';
+// import headerStyles from './header.module.scss';
 
 export default function Header() {
+
+    const data = useStaticQuery(graphql`
+        query {
+            site {
+            siteMetadata {
+              title
+            }
+          }
+        }
+    `)
 
     const navMenu = [
         ['Home', '/'],
@@ -12,12 +25,16 @@ export default function Header() {
 
     const menuDisplay = () => {
         return (
-            <ul>
+            <ul className="nav-link">
                 {
                     navMenu.map((item, id) => {
 
                         return (
-                            <li key={id}><Link to={item[1]}>{item[0]}</Link></li>
+                            <li key={id}>
+                                <Link to={item[1]} className='nav-item' activeClassName="active-nav-item">
+                                    {item[0]}
+                                </Link>
+                            </li>
                         )
                     })
                 }
@@ -26,9 +43,13 @@ export default function Header() {
     }
 
     return (
-        <header>
+        <header className="header">
 
-            <h1>REBDEV BLOG</h1>
+            <h1>
+                <Link to="/" className="title" >
+                    {data.site.siteMetadata.title}
+                </Link>
+            </h1>
 
             <nav>
                 {

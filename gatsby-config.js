@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "devblog_gatsby",
+    title: "REBDev Blog",
+    author: "raiesbo"
   },
   plugins: [
     `gatsby-plugin-sass`
