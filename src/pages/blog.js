@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 
 import Layout from '../components/layout';
 
@@ -16,6 +16,9 @@ export default function BlogPage() {
 			  			}
 			  		html
 			  		excerpt
+					fields {
+						slug
+					}
 					}
 		  		}
 			}
@@ -33,9 +36,11 @@ export default function BlogPage() {
 				{
 					posts.map((item, id) => {
 						return (
-							<li>
-								<h2>{item.node.frontmatter.title}</h2>
-								<p>{item.node.frontmatter.date}</p>
+							<li key={id}>
+								<Link to={item.node.fields.slug}>
+									<h2>{item.node.frontmatter.title}</h2>
+									<p>{item.node.frontmatter.date}</p>
+								</Link>
 							</li>
 						)
 					})
